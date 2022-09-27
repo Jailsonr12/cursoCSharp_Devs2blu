@@ -1,0 +1,11 @@
+C:\devs\AulaOOP2\Devs2Blu.ProjetosAula.AulaOOP2\src\ProjetoAula2OOP2\bin\Debug\ProjetoAula2OOP2.exe.config
+C:\devs\AulaOOP2\Devs2Blu.ProjetosAula.AulaOOP2\src\ProjetoAula2OOP2\bin\Debug\ProjetoAula2OOP2.exe
+C:\devs\AulaOOP2\Devs2Blu.ProjetosAula.AulaOOP2\src\ProjetoAula2OOP2\bin\Debug\ProjetoAula2OOP2.pdb
+C:\devs\AulaOOP2\Devs2Blu.ProjetosAula.AulaOOP2\src\ProjetoAula2OOP2\obj\Debug\ProjetoAula2OOP2.csproj.AssemblyReference.cache
+C:\devs\AulaOOP2\Devs2Blu.ProjetosAula.AulaOOP2\src\ProjetoAula2OOP2\obj\Debug\ProjetoAula2OOP2.csproj.SuggestedBindingRedirects.cache
+C:\devs\AulaOOP2\Devs2Blu.ProjetosAula.AulaOOP2\src\ProjetoAula2OOP2\obj\Debug\ProjetoAula2OOP2.txtname.resources
+C:\devs\AulaOOP2\Devs2Blu.ProjetosAula.AulaOOP2\src\ProjetoAula2OOP2\obj\Debug\ProjetoAula2OOP2.Properties.Resources.resources
+C:\devs\AulaOOP2\Devs2Blu.ProjetosAula.AulaOOP2\src\ProjetoAula2OOP2\obj\Debug\ProjetoAula2OOP2.csproj.GenerateResource.cache
+C:\devs\AulaOOP2\Devs2Blu.ProjetosAula.AulaOOP2\src\ProjetoAula2OOP2\obj\Debug\ProjetoAula2OOP2.csproj.CoreCompileInputs.cache
+C:\devs\AulaOOP2\Devs2Blu.ProjetosAula.AulaOOP2\src\ProjetoAula2OOP2\obj\Debug\ProjetoAula2OOP2.exe
+C:\devs\AulaOOP2\Devs2Blu.ProjetosAula.AulaOOP2\src\ProjetoAula2OOP2\obj\Debug\ProjetoAula2OOP2.pdb
