@@ -6,36 +6,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Devs2Blu.ProjetosAulaOOP3.Main.Utils;
+using Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos.Interface;
 
 namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
-    public class CadrastoMedico {
+    public class CadrastoMedico : IMenuCadrasto {
         public CadrastoMedico() {
 
         }
-        public void MenuCadastroMedico() {
+        public int MenuCadastro() {
             Int32 opcao;
-            do {
-                Console.WriteLine("----- Cadastro de Medico -----");
-                Console.WriteLine("----- 1- Lista de Medico -----");
-                Console.WriteLine("----- 2- Cadastro de Medico -----");
-                Console.WriteLine("----- 3- Alterar  Medico -----");
-                Console.WriteLine("----- 0- SAIR -----");
-                Int32.TryParse(Console.ReadLine(), out opcao);
-
-                switch (opcao) {
-                    case (int)MenuEnums.LISTAR:
-                        ListarMedico();
-                        break;
-                    default:
-                        break;
+            Console.WriteLine("----- Cadastro de Medico -----");
+            Console.WriteLine("----- 1- Lista de Medico -----");
+            Console.WriteLine("----- 2- Cadastro de Medico -----");
+            Console.WriteLine("----- 3- Alterar  Medico -----");
+            Console.WriteLine("----- 0- SAIR -----");
+            Int32.TryParse(Console.ReadLine(), out opcao);
 
 
-                }
 
-            } while (!opcao.Equals((int)MenuEnums.SAIR));
+            return opcao;
         }
 
-        public void ListarMedico() {
+        public void Lista() {
 
             Console.Clear();
 
@@ -50,14 +42,19 @@ namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
             }
 
         }
-        public void CadrastrarMedico() {
 
-        }
-        public void AlterarMedico() {
 
+        public void Cadrastrar() {
+            throw new NotImplementedException();
         }
-        public void ExcluirMedico() {
 
+        public void Alterar() {
+            throw new NotImplementedException();
         }
+
+        public void Excluir() {
+            throw new NotImplementedException();
+        }
+
     }
 }

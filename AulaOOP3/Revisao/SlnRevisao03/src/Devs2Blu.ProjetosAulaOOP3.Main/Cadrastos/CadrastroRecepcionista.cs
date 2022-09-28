@@ -1,4 +1,5 @@
 ﻿using Devs2Blu.ProjetosAula.OOP3.Models.Model;
+using Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos.Interface;
 using Devs2Blu.ProjetosAulaOOP3.Main.Utils.Enums;
 using System;
 using System.Collections.Generic;
@@ -7,36 +8,25 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
-    public class CadrastroRecepcionista {
+    public class CadrastroRecepcionista : IMenuCadrasto {
 
         public CadrastroRecepcionista() {
 
         }
-        public void MenuCadastroRecepcionista() {
+        public Int32 MenuCadastro() {
             Int32 opcao;
-            do {
-                Console.WriteLine("----- Cadastro de Paciente -----");
-                Console.WriteLine("----- 1- Lista de Paciente -----");
-                Console.WriteLine("----- 2- Cadastro de Paciente -----");
-                Console.WriteLine("----- 3- Alterar  Paciente -----");
-                Console.WriteLine("----- 0- SAIR -----");
-                Int32.TryParse(Console.ReadLine(), out opcao);
 
-                switch (opcao) {
-                    case (int)MenuEnums.LISTAR:
-                        ListarRecepcionista();
-                        break;
+            Console.WriteLine("----- Cadastro de Recepcionista -----");
+            Console.WriteLine("----- 1- Lista de Recepcionista -----");
+            Console.WriteLine("----- 2- Cadastro de Recepcionista -----");
+            Console.WriteLine("----- 3- Alterar  Recepcionista -----");
+            Console.WriteLine("----- 0- SAIR -----");
+            Int32.TryParse(Console.ReadLine(), out opcao);
 
-                    default:
-                        break;
-
-
-                }
-
-            } while (!opcao.Equals((int)MenuEnums.SAIR));
+            return opcao;
         }
 
-        public void ListarRecepcionista() {
+        public void Lista() {
 
             Console.Clear();
 
@@ -51,14 +41,19 @@ namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
             }
 
         }
-        public void CadrastrarPaciente() {
 
+
+
+        public void Cadrastrar() {
+            throw new NotImplementedException();
         }
-        public void AlterarPaciente() {
 
+        public void Alterar() {
+            throw new NotImplementedException();
         }
-        public void ExcluirPaciente() {
 
+        public void Excluir() {
+            throw new NotImplementedException();
         }
     }
 }

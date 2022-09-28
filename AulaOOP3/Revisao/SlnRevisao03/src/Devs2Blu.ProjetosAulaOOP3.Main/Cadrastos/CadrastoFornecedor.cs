@@ -1,4 +1,5 @@
 ﻿using Devs2Blu.ProjetosAula.OOP3.Models.Model;
+using Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos.Interface;
 using Devs2Blu.ProjetosAulaOOP3.Main.Utils.Enums;
 using System;
 using System.Collections.Generic;
@@ -7,14 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
-    public class CadrastoFornecedor {
+    public class CadrastoFornecedor : IMenuCadrasto{
 
-        public CadrastoFornecedor() {
-        }
-
-        public void MenuCadrastoFornecedoro() {
+        public Int32 MenuCadrasto() {
             Int32 opcao;
-            do {
+            
                 Console.WriteLine("----- Cadastro de Fornecedor -----");
                 Console.WriteLine("----- 1- Lista de Fornecedor -----");
                 Console.WriteLine("----- 2- Cadastro de Fornecedor -----");
@@ -22,20 +20,10 @@ namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
                 Console.WriteLine("----- 0- SAIR -----");
                 Int32.TryParse(Console.ReadLine(), out opcao);
 
-                switch (opcao) {
-                    case (int)MenuEnums.LISTAR:
-                        ListarFornecedor();
-                        break;
-                    default:
-                        break;
-
-
-                }
-
-            } while (!opcao.Equals((int)MenuEnums.SAIR));
+                return opcao;
         }
 
-        public void ListarFornecedor() {
+        public void Lista() {
 
             Console.Clear();
 
@@ -50,15 +38,26 @@ namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
             }
 
         }
-        public void CadrastrarFornecedor() {
 
+        public CadrastoFornecedor() {
         }
-        public void AlterarFornecedor() {
 
+        public void Alterar() {
+            throw new NotImplementedException();
         }
-        public void ExcluirFornecedor() {
 
+        public void Cadrastrar() {
+            throw new NotImplementedException();
         }
+
+        public void Excluir() {
+            throw new NotImplementedException();
+        }
+
+       
+              
+
+      
 
 
 

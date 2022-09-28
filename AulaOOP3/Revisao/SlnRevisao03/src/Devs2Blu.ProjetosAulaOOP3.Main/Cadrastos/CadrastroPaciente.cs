@@ -3,42 +3,58 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos.Interface;
 using Devs2Blu.ProjetosAula.OOP3.Models.Model;
 using Devs2Blu.ProjetosAulaOOP3.Main.Utils;
 using Devs2Blu.ProjetosAulaOOP3.Main.Utils.Enums;
 
 
 namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
-    public class CadrastroPaciente {
+    public class CadrastroPaciente : IMenuCadrasto {
         public CadrastroPaciente() {
 
         }
-        public void MenuCadastroPaciente() {
-            Int32 opcao;
-            do {
-                Console.WriteLine("----- Cadastro de Paciente -----");
-                Console.WriteLine("----- 1- Lista de Paciente -----");
-                Console.WriteLine("----- 2- Cadastro de Paciente -----");
-                Console.WriteLine("----- 3- Alterar  Paciente -----");
-                Console.WriteLine("----- 0- SAIR -----");
-                Int32.TryParse(Console.ReadLine(), out opcao);
-
-                switch (opcao) {
-                    case (int)MenuEnums.LISTAR:
-                        ListarPacientes();
-                        break;
-
-                    default:
-                        break;
 
 
-                }
-
-            } while (!opcao.Equals((int)MenuEnums.SAIR));
+        public void Lista() {
+            ListarPacientes();
         }
 
-        public void ListarPacientes() {
-            
+        public void Cadrastrar() {
+
+            Paciente paciente = new Paciente();
+            CadrastrarPaciente(paciente);
+        }
+
+
+        public void Alterar() {
+            Paciente paciente = new Paciente();
+            AlterarPaciente(paciente);
+        }
+
+        public void Excluir() {
+            Paciente paciente = new Paciente();
+            ExcluirPaciente(paciente);
+        }
+
+
+        #region FACEDE
+        public Int32 MenuCadastro() {
+            Int32 opcao;
+
+            Console.WriteLine("----- Cadastro de Paciente -----");
+            Console.WriteLine("----- 1- Lista de Paciente -----");
+            Console.WriteLine("----- 2- Cadastro de Paciente -----");
+            Console.WriteLine("----- 3- Alterar  Paciente -----");
+            Console.WriteLine("----- 0- SAIR -----");
+            Int32.TryParse(Console.ReadLine(), out opcao);
+
+
+
+            return opcao;
+        }
+        private void ListarPacientes() {
+
             Console.Clear();
 
             foreach (Paciente paceinte in Program.Mock.ListPacientes) {
@@ -52,18 +68,20 @@ namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
             }
 
         }
-        public void CadrastrarPaciente(Paciente novoPaciente) {
-            
+        private void CadrastrarPaciente(Paciente novoPaciente) {
+
             Program.Mock.ListPacientes.Add(novoPaciente);
 
         }
-        public void AlterarPaciente() {
+        private void AlterarPaciente(Paciente pessoa) {
 
         }
-        public void ExcluirPaciente(Paciente paciente) {
-            Program.Mock.ListPacientes.Find( o => o.Codigo == paciente.Codigo);
-
+        private void ExcluirPaciente(Paciente paciente) {
+            Program.Mock.ListPacientes.Find(o => o.Codigo == paciente.Codigo);
         }
 
+
+
+        #endregion
     }
 }
