@@ -23,5 +23,8 @@ namespace Devs2Blu.ProjetosAulaOOP3.Main.Utils.Enums {
         AGENDA =50,
         PRONTUARIO=60,
         FINCANCEIRO=70,
+        IDIOMA = 80,
+        
+
     }
 }

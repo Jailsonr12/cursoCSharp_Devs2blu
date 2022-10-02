@@ -14,6 +14,8 @@ namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos.Interface {
         void Alterar();
         void Excluir();
 
+       
+
         
 
 

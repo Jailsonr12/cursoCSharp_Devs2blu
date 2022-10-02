@@ -8,30 +8,30 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
-    public class CadrastroRecepcionista : IMenuCadrasto {
+    public class CadrastroRecepcionistaIngles : IMenuCadrasto {
 
-        public CadrastroRecepcionista() {
+        public CadrastroRecepcionistaIngles() {
 
         }
 
-        private void ListarRecepcionista() {
+        private void ListarRecepcionistaingles() {
 
             Console.Clear();
 
             foreach (Recepcionista recepcionista in Program.Mock.ListRecepcionista) {
                 Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-                Console.WriteLine($"Recepcionista: {recepcionista.CodigoRecepcionista}");
-                Console.WriteLine($"Nome: {recepcionista.Nome}");
-                Console.WriteLine($"CPF: {recepcionista.CGCCPF}");
-                Console.WriteLine($"Setor: {recepcionista.Setor}");
+                Console.WriteLine($"Receptionist {recepcionista.CodigoRecepcionista}");
+                Console.WriteLine($"Name: {recepcionista.Nome}");
+                Console.WriteLine($"ITIN: {recepcionista.CGCCPF}");
+                Console.WriteLine($"Sector: {recepcionista.Setor}");
                 Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
 
             }
-            Console.WriteLine("Digite qualquer coisa para sair");
+            Console.WriteLine("Type anything to exit");
             Console.ReadLine();
 
         }
-        private void CadrastrarRecepcionista(Recepcionista novoRecepcionista) {
+        private void CadrastrarRecepcionistaIngles(Recepcionista novoRecepcionista) {
 
             Program.Mock.ListRecepcionista.Add(novoRecepcionista);
 
@@ -58,13 +58,13 @@ namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
         public Int32 MenuCadastro() {
             Int32 opcao;
             Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-            Console.WriteLine("----- Cadastro de Recepcionista                       -----");
-            Console.WriteLine("----- 1 - Lista de Recepcionista                       -----");
-            Console.WriteLine("----- 2 - Cadastro de Recepcionista                    -----");
-            Console.WriteLine("----- 3 - Alterar  Recepcionista                       -----");
-            Console.WriteLine("----- 4 - Exluir  Fornecedor                          -----");
-            Console.WriteLine("----- 0 - SAIR                                         -----");
-            Console.WriteLine("----- Digite o número da opção que deseja ver         -----");
+            Console.WriteLine("----- Receptionist Registration                       -----");
+            Console.WriteLine("----- 1- Receptionist List                            -----");
+            Console.WriteLine("----- 2- Receptionist Registration                    -----");
+            Console.WriteLine("----- 3- Change Receptionist                          -----");
+            Console.WriteLine("----- 4- Delete Provider                              -----");
+            Console.WriteLine("----- 0- EXIT                                         -----");
+            Console.WriteLine("----- Enter the number of the option you want to see  -----");
             Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
             Int32.TryParse(Console.ReadLine(), out opcao);
 
@@ -72,7 +72,7 @@ namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
         }
 
         public void Lista() {
-            ListarRecepcionista();
+            ListarRecepcionistaingles();
 
         }
 
@@ -86,25 +86,25 @@ namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
             recepcionista.Codigo = rd.Next(1, 100) + DateTime.Now.Second;
             recepcionista.CodigoRecepcionista = Int32.Parse($"{recepcionista.Codigo}{rd.Next(100, 999)}");
 
-            Console.WriteLine("Informe o nome da Recepcionista: ");
+            Console.WriteLine("Enter the name of the Receptionist: ");
             recepcionista.Nome = Console.ReadLine();
 
-            Console.WriteLine("Informe o CPF da Recepcionista: ");
+            Console.WriteLine("Enter the Receptionist's CPF: ");
             recepcionista.CGCCPF = Console.ReadLine();
 
-            Console.WriteLine("Informe o setor da Recepcionista: ");
+            Console.WriteLine("Inform the receptionist sector: ");
             recepcionista.Setor = Console.ReadLine();
 
-            CadrastrarRecepcionista(recepcionista);
+            CadrastrarRecepcionistaIngles(recepcionista);
         }
-
+    
 
         public void Alterar() {
             Console.Clear();
             Recepcionista Recepcionista;
             int codigoRecepcionista;
 
-            Console.WriteLine("Informe o Recepcionista que deseja alterar: ");
+            Console.WriteLine("Inform the Receptionist that you want to change: ");
             ListarRecepcionistasByCodeAndName();
 
             Int32.TryParse(Console.ReadLine(), out codigoRecepcionista);
@@ -115,22 +115,22 @@ namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
             bool alterar = true;
 
             do {
-                Console.WriteLine($"Recepcionista: {Recepcionista.Codigo}/{Recepcionista.CodigoRecepcionista} | Nome: {Recepcionista.Nome} | CPF: {Recepcionista.CGCCPF} | Setor: {Recepcionista.Setor}");
-                Console.WriteLine("Qual campo deseja alterar?");
-                Console.WriteLine("01 - Nome | 02 - CPF | 03 - Setor | 00 - Sair");
+                Console.WriteLine($"Receptionist: {Recepcionista.Codigo}/{Recepcionista.CodigoRecepcionista} | Nome: {Recepcionista.Nome} | CPF: {Recepcionista.CGCCPF} | Sector: {Recepcionista.Setor}");
+                Console.WriteLine("Which field do you want to change?");
+                Console.WriteLine("01 - Name | 02 - ITIN | 03 - Setor | 00 - Sair");
                 opcaoAlterar = Console.ReadLine();
 
-                switch (opcaoAlterar) {
+                switch (opcaoAlterar){
                     case "01":
-                        Console.WriteLine("Informe um novo nome: ");
+                        Console.WriteLine("Enter a new name: ");
                         Recepcionista.Nome = Console.ReadLine();
                         break;
                     case "02":
-                        Console.WriteLine("Informe um novo CPF: ");
+                        Console.WriteLine("Enter a new ITIN: ");
                         Recepcionista.CGCCPF = Console.ReadLine();
                         break;
                     case "03":
-                        Console.WriteLine("Informe um novo setor: ");
+                        Console.WriteLine("Enter a new Sector: ");
                         Recepcionista.Setor = Console.ReadLine();
                         break;
                     default:
@@ -140,7 +140,7 @@ namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
 
                 if (alterar) {
                     Console.Clear();
-                    Console.WriteLine("Dado alterado com sucesso!");
+                    Console.WriteLine("Data successfully changed!");
                 }
             } while (alterar);
 
@@ -153,26 +153,26 @@ namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
             int codigorecepcionista1;
             int codigorecepcionista2;
 
-            Console.WriteLine("| Lista de Recepcionistas: ");
+            Console.WriteLine("| List of Receptionists: ");
             ListarRecepcionistasByCodeAndName();
-            Console.WriteLine("Informe o código do recepcionista que deseja excluir: ");
+            Console.WriteLine("Enter the code of the receptionist you want to delete: ");
             Int32.TryParse(Console.ReadLine(), out codigorecepcionista1);
-            Console.WriteLine("Confirme novamente o codigo do recepcionista: ");
+            Console.WriteLine("Confirm the receptionist code again: ");
             Int32.TryParse(Console.ReadLine(), out codigorecepcionista2);
 
             recepcionista = Program.Mock.ListRecepcionista.Find(r => r.CodigoRecepcionista == codigorecepcionista1 && r.CodigoRecepcionista == codigorecepcionista2);
 
             if (codigorecepcionista1 == codigorecepcionista2) {
                 Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-                Console.WriteLine("Recepcionista Exluido com sucesso                     -----");
-                Console.WriteLine("Aperte qualquer tecla para sair                       -----");
+                Console.WriteLine("Receptionists Deleted Successfully                    -----");
+                Console.WriteLine("Press any key to exit                                 -----");
                 Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
                 Console.ReadLine();
             }
             else {
                 Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-                Console.WriteLine("********          Aconteceu um ERRO           ********-----");
-                Console.WriteLine("Aperte qualquer tecla para sair                       -----");
+                Console.WriteLine("********        AN ERROR HAS OCCURRED         ********-----");
+                Console.WriteLine("Press any key to exit                                 -----");
                 Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
                 Console.ReadLine();
             }

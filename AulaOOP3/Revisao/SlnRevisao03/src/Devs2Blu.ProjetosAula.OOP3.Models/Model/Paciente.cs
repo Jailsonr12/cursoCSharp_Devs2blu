@@ -26,6 +26,7 @@ namespace Devs2Blu.ProjetosAula.OOP3.Models.Model {
             CGCCPF = cpf;
             TipoPessoa = TipoPessoa.PF;
             Convenio = convenio;
+           
             Random rd = new Random();
 
             CodigoPaciente = Int32.Parse($"{codigo}{rd.Next(100, 999)}");

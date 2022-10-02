@@ -10,8 +10,8 @@ using Devs2Blu.ProjetosAulaOOP3.Main.Utils.Enums;
 
 
 namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
-    public class CadrastroPaciente : IMenuCadrasto {
-        public CadrastroPaciente() {
+    public class CadrastroPacienteIngles : IMenuCadrasto {
+        public CadrastroPacienteIngles() {
 
         }
 
@@ -22,18 +22,18 @@ namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
 
             foreach (Paciente paceinte in Program.Mock.ListPacientes) {
                 Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-                Console.WriteLine($"Paciente: {paceinte.CodigoPaciente}");
-                Console.WriteLine($"Nome: {paceinte.Nome}");
-                Console.WriteLine($"CPF: {paceinte.CGCCPF}");
-                Console.WriteLine($"Convenio: {paceinte.Convenio}");
+                Console.WriteLine($"Patient: {paceinte.CodigoPaciente}");
+                Console.WriteLine($"Name: {paceinte.Nome}");
+                Console.WriteLine($"ITIN: {paceinte.CGCCPF}");
+                Console.WriteLine($"Health insurance: {paceinte.Convenio}");
                 Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
 
             }
-            Console.WriteLine("Digite qualquer coisa para sair");
+            Console.WriteLine("Enter 0 to exit");
             Console.ReadLine();
 
         }
-        
+        //
         private void CadrastrarPaciente(Paciente novoPaciente) {
 
             Program.Mock.ListPacientes.Add(novoPaciente);
@@ -62,13 +62,13 @@ namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
         public Int32 MenuCadastro() {
             Int32 opcao;
             Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-            Console.WriteLine("----- Cadastro de Paciente                            -----");
-            Console.WriteLine("----- 1 - Lista de Paciente                           -----");
-            Console.WriteLine("----- 2 - Cadastro de Paciente                        -----");
-            Console.WriteLine("----- 3 - Alterar  Paciente                           -----");
-            Console.WriteLine("----- 4 - Excluir  Paciente                           -----");
-            Console.WriteLine("----- 0 - SAIR                                        -----");
-            Console.WriteLine("----- Digite o número da opção que deseja ver         -----");
+            Console.WriteLine("----- Patient Record                                  -----");
+            Console.WriteLine("----- 1 - Patient List                                -----");
+            Console.WriteLine("----- 2 - Patient Record                              -----");
+            Console.WriteLine("----- 3 - Change Patient                              -----");
+            Console.WriteLine("----- 4 - Delete Patient                              -----");
+            Console.WriteLine("----- 0 - EXIT                                        -----");
+            Console.WriteLine("----- Enter the number of the option you want to see  -----");
             Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
             Int32.TryParse(Console.ReadLine(), out opcao);
 
@@ -90,13 +90,13 @@ namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
             paciente.Codigo = rd.Next(1, 100) + DateTime.Now.Second;
             paciente.CodigoPaciente = Int32.Parse($"{paciente.Codigo}{rd.Next(100, 999)}");
 
-            Console.WriteLine("Informe o nome do paciente: ");
+            Console.WriteLine("Enter the patient's name: ");
             paciente.Nome = Console.ReadLine();
 
-            Console.WriteLine("Informe o CPF do paciente: ");
+            Console.WriteLine("Enter the patient's CPF: ");
             paciente.CGCCPF = Console.ReadLine();
 
-            Console.WriteLine("Informe o convênio do paciente: ");
+            Console.WriteLine("Inform the patient's insurance: ");
             paciente.Convenio = Console.ReadLine();
 
             CadrastrarPaciente(paciente);
@@ -108,7 +108,7 @@ namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
             Paciente paciente;
             int codigoPaciente;
 
-            Console.WriteLine("Informe o paciente que deseja alterar: ");
+            Console.WriteLine("Inform the patient that you want to change: ");
             ListarPacientesByCodeAndName();
 
             Int32.TryParse(Console.ReadLine(), out codigoPaciente);
@@ -119,22 +119,22 @@ namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
             bool alterar = true;
 
             do {
-                Console.WriteLine($"Paciente: {paciente.Codigo}/{paciente.CodigoPaciente} | Nome: {paciente.Nome} | CPF: {paciente.CGCCPF} | Convênio: {paciente.Convenio}");
-                Console.WriteLine("Qual campo deseja alterar?");
-                Console.WriteLine("01 - Nome | 02 - CPF | 03 - Convênio | 00 - Sair");
+                Console.WriteLine($"Patient: {paciente.Codigo}/{paciente.CodigoPaciente} | Name: {paciente.Nome} | ITIN: {paciente.CGCCPF} | Health insurance: {paciente.Convenio}");
+                Console.WriteLine("Which field do you want to change?");
+                Console.WriteLine("01 - Nome | 02 - ITIN | 03 - Health insurance | 00 - Sair");
                 opcaoAlterar = Console.ReadLine();
 
                 switch (opcaoAlterar){
                     case "01":
-                        Console.WriteLine("Informe um novo nome: ");
+                        Console.WriteLine("Enter a new name: ");
                         paciente.Nome = Console.ReadLine();
                         break;
                     case "02":
-                        Console.WriteLine("Informe um novo CPF: ");
+                        Console.WriteLine("Enter a new ITIN: ");
                         paciente.CGCCPF = Console.ReadLine();
                         break;
                     case "03":
-                        Console.WriteLine("Informe um novo convênio: ");
+                        Console.WriteLine("Report a new agreement: ");
                         paciente.Convenio = Console.ReadLine();
                         break;
 
@@ -145,7 +145,7 @@ namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
 
                 if (alterar) {
                     Console.Clear();
-                    Console.WriteLine("Dado alterado com sucesso!");
+                    Console.WriteLine("Data successfully changed!");
                 }
             } while (alterar);
 
@@ -159,33 +159,31 @@ namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
             int codigopaciente1;
             int codigopaciente2;
 
-            Console.WriteLine("*** Lista de Pacientes: ");
+            Console.WriteLine("| List of Patients ");
             ListarPacientesByCodeAndName();
-            Console.WriteLine("Informe o código do paciente que deseja excluir: ");
+            Console.WriteLine("Enter the code of the patient you want to delete: ");
             Int32.TryParse(Console.ReadLine(), out codigopaciente1);
-            Console.WriteLine("Confirme novamente o codigo do paciente: ");
+            Console.WriteLine("Confirm the patient code again ");
             Int32.TryParse(Console.ReadLine(), out codigopaciente2);
 
             paciente = Program.Mock.ListPacientes.Find(p => p.CodigoPaciente == codigopaciente1 && p.CodigoPaciente == codigopaciente2);
 
-            if(codigopaciente1 == codigopaciente2) {
+            if (codigopaciente1 == codigopaciente2) {
                 Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-                Console.WriteLine("Paciente Exluido com sucesso                          -----");
-                Console.WriteLine("Aperte qualquer tecla para sair                       -----");
+                Console.WriteLine("Patients Deleted Successfully                         -----");
+                Console.WriteLine("Press any key to exit                                 -----");
                 Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
                 Console.ReadLine();
             }
             else {
                 Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-                Console.WriteLine("********          Aconteceu um ERRO           ********-----");
-                Console.WriteLine("Aperte qualquer tecla para sair                       -----");
+                Console.WriteLine("********        AN ERROR HAS OCCURRED         ********-----");
+                Console.WriteLine("Press any key to exit                                 -----");
                 Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
                 Console.ReadLine();
             }
 
             ExcluirPaciente(paciente);
-
-
                         
         }
 

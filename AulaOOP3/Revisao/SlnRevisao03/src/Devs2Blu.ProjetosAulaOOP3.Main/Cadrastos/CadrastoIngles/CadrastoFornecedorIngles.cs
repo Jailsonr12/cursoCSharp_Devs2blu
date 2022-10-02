@@ -8,8 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
-    public class CadrastoFornecedor : IMenuCadrasto {
-        public CadrastoFornecedor() {
+    public class CadrastoFornecedorIngles : IMenuCadrasto {
+        public CadrastoFornecedorIngles() {
         }
 
         private void ListarForcedor() {
@@ -19,13 +19,13 @@ namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
             foreach (Fornecedor fornecedor in Program.Mock.ListFornecedor) {
                 Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
                 Console.WriteLine($"Forcederor: {fornecedor.CodigoFornecedor}");
-                Console.WriteLine($"Nome: {fornecedor.Nome}");
-                Console.WriteLine($"CPF: {fornecedor.CGCCPF}");
-                Console.WriteLine($"Mercadiria: {fornecedor.TipoFornecedor}");
+                Console.WriteLine($"Name: {fornecedor.Nome}");
+                Console.WriteLine($"ITIN: {fornecedor.CGCCPF}");
+                Console.WriteLine($"Merchandise {fornecedor.TipoFornecedor}");
                 Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
 
             }
-            Console.WriteLine("Digite qualquer coisa para sair");
+            Console.WriteLine("Type anything to exit");
             Console.ReadLine();
 
         }
@@ -57,13 +57,13 @@ namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
         public Int32 MenuCadastro() {
             Int32 opcao;
             Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-            Console.WriteLine("----- Cadastro de Fornecedor                          -----");
-            Console.WriteLine("----- 1 - Lista de Fornecedor                          -----");
-            Console.WriteLine("----- 2 - Cadastro de Fornecedor                       -----");
-            Console.WriteLine("----- 3 - Alterar  Fornecedor                         -----");
-            Console.WriteLine("----- 4 - Excluir  Fornecedor                          -----");
-            Console.WriteLine("----- 0 - SAIR                                         -----");
-            Console.WriteLine("----- Digite o número da opção que deseja ver         -----");
+            Console.WriteLine("----- Supplier Registration                           -----");
+            Console.WriteLine("----- 1 - Vendor List                                 -----");
+            Console.WriteLine("----- 2 - Supplier Registration                       -----");
+            Console.WriteLine("----- 3 - Change Provider                             -----");
+            Console.WriteLine("----- 4 - Delete Provider                             -----");
+            Console.WriteLine("----- 0 - EXIT                                        -----");
+            Console.WriteLine("----- Enter the number of the option you want to see  -----");
             Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
             Int32.TryParse(Console.ReadLine(), out opcao);
 
@@ -83,13 +83,13 @@ namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
             fornecedor.Codigo = rd.Next(1, 100) + DateTime.Now.Second;
             fornecedor.CodigoFornecedor = Int32.Parse($"{fornecedor.Codigo}{rd.Next(100, 999)}");
 
-            Console.WriteLine("Informe o nome do fornecedor: ");
+            Console.WriteLine("Enter the name of the supplier: ");
             fornecedor.Nome = Console.ReadLine();
 
-            Console.WriteLine("Informe o CPF do fornecedor: ");
+            Console.WriteLine("Enter the supplier's ITIN: ");
             fornecedor.CGCCPF = Console.ReadLine();
 
-            Console.WriteLine("Informe a mercadoria do fornecedor: ");
+            Console.WriteLine("Inform the supplier's merchandise: ");
             fornecedor.TipoFornecedor = Console.ReadLine();
 
             CadrastrarFornecedor(fornecedor);
@@ -102,7 +102,7 @@ namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
             Fornecedor fornecedor;
             int codigoFornecedor;
 
-            Console.WriteLine("Informe o Fornecedor que deseja alterar: ");
+            Console.WriteLine("Inform the Supplier you want to change: ");
             ListarFornecedorsByCodeAndName();
 
             Int32.TryParse(Console.ReadLine(), out codigoFornecedor);
@@ -113,22 +113,22 @@ namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
             bool alterar = true;
 
             do {
-                Console.WriteLine($"Fornecedor: {fornecedor.Codigo}/{fornecedor.CodigoFornecedor} | Nome: {fornecedor.Nome} | CPF: {fornecedor.CGCCPF} | Mercadoria: {fornecedor.TipoFornecedor}");
-                Console.WriteLine("Qual campo deseja alterar?");
+                Console.WriteLine($"Provider: {fornecedor.Codigo}/{fornecedor.CodigoFornecedor} | Name: {fornecedor.Nome} | ITIN: {fornecedor.CGCCPF} | Merchandise: {fornecedor.TipoFornecedor}");
+                Console.WriteLine("Which field do you want to change?");
                 Console.WriteLine("01 - Nome | 02 - CPF | 03 - Mercadoria | 00 - Sair");
                 opcaoAlterar = Console.ReadLine();
 
                 switch (opcaoAlterar) {
                     case "01":
-                        Console.WriteLine("Informe um novo nome: ");
+                        Console.WriteLine("Enter a new name: ");
                         fornecedor.Nome = Console.ReadLine();
                         break;
                     case "02":
-                        Console.WriteLine("Informe um novo CPF: ");
+                        Console.WriteLine("Enter a new ITIN: ");
                         fornecedor.CGCCPF = Console.ReadLine();
                         break;
                     case "03":
-                        Console.WriteLine("Informe uma nova Mercadoria: ");
+                        Console.WriteLine("Report a new Good: ");
                         fornecedor.TipoFornecedor = Console.ReadLine();
                         break;
 
@@ -139,7 +139,7 @@ namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
 
                 if (alterar) {
                     Console.Clear();
-                    Console.WriteLine("Dado alterado com sucesso!");
+                    Console.WriteLine("Data successfully changed!");
                 }
             } while (alterar);
 
@@ -154,26 +154,26 @@ namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
             int codigoFornecedor1;
             int codigoFornecedor2;
 
-            Console.WriteLine("| Lista de Fornecedor");
+            Console.WriteLine("| Supplier List");
             ListarFornecedorsByCodeAndName();
-            Console.WriteLine("Informe o codigo de qual fornecedor que deseja excluir: ");
+            Console.WriteLine("Inform the code of which supplier you want to exclude: ");
             Int32.TryParse(Console.ReadLine(), out codigoFornecedor1);
-            Console.WriteLine("Confirme novamente o codigo do fornecedor: ");
+            Console.WriteLine("Confirm the supplier code again: ");
             Int32.TryParse(Console.ReadLine(), out codigoFornecedor2);
 
             fornecedor = Program.Mock.ListFornecedor.Find(p => p.CodigoFornecedor == codigoFornecedor1 && p.CodigoFornecedor == codigoFornecedor2);
 
             if (codigoFornecedor1 == codigoFornecedor2) {
                 Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-                Console.WriteLine("Fornecedor Exluido com sucesso                        -----");
-                Console.WriteLine("Aperte qualquer tecla para sair                       -----");
+                Console.WriteLine("Supplier Deleted Successfully                         -----");
+                Console.WriteLine("Press any key to exit                                 -----");
                 Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
                 Console.ReadLine();
             }
             else {
                 Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-                Console.WriteLine("********          Aconteceu um ERRO           ********-----");
-                Console.WriteLine("Aperte qualquer tecla para sair                       -----");
+                Console.WriteLine("********        AN ERROR HAS OCCURRED         ********-----");
+                Console.WriteLine("Press any key to exit                                 -----");
                 Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
                 Console.ReadLine();
             }

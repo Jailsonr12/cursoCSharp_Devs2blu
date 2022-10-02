@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Devs2Blu.ProjetosAulaOOP3.Main.Cadrastos {
-    public class CadrastroPadrao : IMenuCadrasto {
+    public class CadrastroPadraoIngles : IMenuCadrasto {
         public void Alterar() {
             throw new NotImplementedException();
         }
