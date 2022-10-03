@@ -44,9 +44,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cadrastos\CadrastoFornecedor.cs" />
+    <Compile Include="Cadrastos\CadrastoIngles\Ingles.cs" />
     <Compile Include="Cadrastos\CadrastoMedico.cs" />
     <Compile Include="Cadrastos\CadrastroPaciente.cs" />
+    <Compile Include="Cadrastos\CadrastroPadrao.cs" />
     <Compile Include="Cadrastos\CadrastroRecepcionista.cs" />
+    <Compile Include="Cadrastos\CadrastoIngles\CadrastoFornecedorIngles.cs" />
+    <Compile Include="Cadrastos\CadrastoIngles\CadrastoMedicoIngles.cs" />
+    <Compile Include="Cadrastos\CadrastoIngles\CadrastroPacienteIngles.cs" />
+    <Compile Include="Cadrastos\CadrastoIngles\CadrastroPadraoIngles.cs" />
+    <Compile Include="Cadrastos\CadrastoIngles\CadrastroRecepcionistaIngles.cs" />
+    <Compile Include="Cadrastos\Interface\IMenuCadrasto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\Enums\MenuEnums.cs" />

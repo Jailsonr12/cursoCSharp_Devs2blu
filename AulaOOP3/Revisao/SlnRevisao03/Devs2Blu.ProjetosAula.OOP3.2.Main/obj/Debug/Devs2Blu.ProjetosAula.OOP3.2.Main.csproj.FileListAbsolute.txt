@@ -1,3 +1,0 @@
-C:\devs\AulaOOP3\Revisao\SlnRevisao03\Devs2Blu.ProjetosAula.OOP3.2.Main\obj\Debug\Devs2Blu.ProjetosAula.OOP3.2.Main.csproj.AssemblyReference.cache
-C:\devs\AulaOOP3\Revisao\SlnRevisao03\Devs2Blu.ProjetosAula.OOP3.2.Main\obj\Debug\Devs2Blu.ProjetosAula.OOP3.2.Main.csproj.SuggestedBindingRedirects.cache
-C:\devs\AulaOOP3\Revisao\SlnRevisao03\Devs2Blu.ProjetosAula.OOP3.2.Main\obj\Debug\Devs2Blu.ProjetosAula.OOP3.2.Main.csproj.CoreCompileInputs.cache

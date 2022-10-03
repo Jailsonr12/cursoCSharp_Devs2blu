@@ -10,7 +10,7 @@ namespace Devs2Blu.ProjetosAulaOOP3.Main.Utils {
         public List<Paciente> ListPacientes { get; set; }
         public List<Medico> ListMedico { get; set; }
         public List<Recepcionista> ListRecepcionista { get; set; }
-        public List<Fornecedor> ListFornecedore { get; set; }
+        public List<Fornecedor> ListFornecedor { get; set; }
 
 
 
@@ -18,9 +18,7 @@ namespace Devs2Blu.ProjetosAulaOOP3.Main.Utils {
             ListPacientes = new List<Paciente>();
             ListMedico = new List<Medico>();
             ListRecepcionista = new List<Recepcionista>();
-            ListFornecedore = new List<Fornecedor>();
-
-
+            ListFornecedor = new List<Fornecedor>();
             CargaMock();
         }
 
@@ -47,11 +45,12 @@ namespace Devs2Blu.ProjetosAulaOOP3.Main.Utils {
 
             for (int i = 0; i < 10; i++) {
 
-                Medico medico = new Medico(i, $"Medico {i + 1}", $"{i}23{i}56{i}891{i}", rd.Next(100, 999), especialidades[rd.Next(0, 4)]);
+                Medico medico = new Medico(i, $"Medico {i + 1}", $"{i}23{i}56{i}891{i}", rd.Next(100, 999), especialidades[rd.Next(0, especialidades.Length)]) ;
                 ListMedico.Add(medico);
             }
 
         }
+        
         public void CargaRecepcionista() {
 
             Random rd = new Random();
@@ -71,7 +70,7 @@ namespace Devs2Blu.ProjetosAulaOOP3.Main.Utils {
             for (int i = 0; i < 10; i++) {
 
                 Fornecedor fornecedor = new Fornecedor(i, $"Fornecedor {i}", $"{i}23{i}56{i}891{i}", tipofornecedor[rd.Next(0, 5)]);
-                ListFornecedore.Add(fornecedor);
+                ListFornecedor.Add(fornecedor);
             }
         }
 
