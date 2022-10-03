@@ -28,5 +28,6 @@ namespace Devs2Blu.ProjetosAula.OOP3.Models.Model {
             CodigoMedico = Int32.Parse($"{codigo}{rd.Next(10, 100)}");
 
         }
+      
     }
 }
