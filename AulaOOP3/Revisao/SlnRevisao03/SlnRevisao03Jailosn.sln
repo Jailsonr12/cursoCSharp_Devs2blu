@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Devs2Blu.ProjetosAulaOOP3.Main", "src\Devs2Blu.ProjetosAulaOOP3.Main\Devs2Blu.ProjetosAulaOOP3.Main.csproj", "{9684ACF9-3173-4CB9-925C-D078FD86CF95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Devs2Blu.ProjetosAula.OOP3.Models", "src\Devs2Blu.ProjetosAula.OOP3.Models\Devs2Blu.ProjetosAula.OOP3.Models.csproj", "{7CD81F3D-46DF-48B5-8001-AF673AAE55D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9684ACF9-3173-4CB9-925C-D078FD86CF95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9684ACF9-3173-4CB9-925C-D078FD86CF95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9684ACF9-3173-4CB9-925C-D078FD86CF95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9684ACF9-3173-4CB9-925C-D078FD86CF95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CD81F3D-46DF-48B5-8001-AF673AAE55D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CD81F3D-46DF-48B5-8001-AF673AAE55D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CD81F3D-46DF-48B5-8001-AF673AAE55D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CD81F3D-46DF-48B5-8001-AF673AAE55D3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C39203E6-245B-4846-8EE0-AFBBDB256C77}
+	EndGlobalSection
+EndGlobal
