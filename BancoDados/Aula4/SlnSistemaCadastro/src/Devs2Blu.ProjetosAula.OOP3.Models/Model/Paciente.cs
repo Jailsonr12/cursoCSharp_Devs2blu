@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 
 namespace Devs2Blu.ProjetosAula.SistemaCadastro.Models.Model {
-    public class Paciente : Pessoa {
+    public class Paciente  {
 
         public Int32 ID { get; set; }
 
@@ -26,7 +26,6 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Models.Model {
             Convenio = new Convenio();
             Status = FlStatus.A;
             FLObito = 0;
-            TipoPessoa = TipoPessoa.PF;
 
         }
 

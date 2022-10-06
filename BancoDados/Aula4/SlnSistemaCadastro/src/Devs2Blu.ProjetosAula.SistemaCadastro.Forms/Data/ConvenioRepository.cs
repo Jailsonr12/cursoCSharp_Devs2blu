@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms.Data {
-    internal class ConvenioRepository {
+    public class ConvenioRepository {
 
         public MySqlDataReader FetchAll() {
 
