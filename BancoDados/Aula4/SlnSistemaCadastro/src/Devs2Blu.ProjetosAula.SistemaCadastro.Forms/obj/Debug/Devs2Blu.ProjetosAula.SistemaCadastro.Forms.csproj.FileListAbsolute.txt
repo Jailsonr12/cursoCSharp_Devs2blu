@@ -21,3 +21,5 @@ C:\devs\BancoDados\Aula4\SlnSistemaCadastro\src\Devs2Blu.ProjetosAula.SistemaCad
 C:\devs\BancoDados\Aula4\SlnSistemaCadastro\src\Devs2Blu.ProjetosAula.SistemaCadastro.Forms\obj\Debug\Devs2Blu.ProjetosAula.SistemaCadastro.Forms.exe.config
 C:\devs\BancoDados\Aula4\SlnSistemaCadastro\src\Devs2Blu.ProjetosAula.SistemaCadastro.Forms\obj\Debug\Devs2Blu.ProjetosAula.SistemaCadastro.Forms.Form1.resources
 C:\devs\BancoDados\Aula4\SlnSistemaCadastro\src\Devs2Blu.ProjetosAula.SistemaCadastro.Forms\obj\Debug\Devs2Blu.ProjetosAula.SistemaCadastro.Forms.csproj.CopyComplete
+C:\devs\BancoDados\Aula4\SlnSistemaCadastro\src\Devs2Blu.ProjetosAula.SistemaCadastro.Forms\bin\Debug\Devs2Blu.ProjetosAula.SistemaCadastro.Models.dll
+C:\devs\BancoDados\Aula4\SlnSistemaCadastro\src\Devs2Blu.ProjetosAula.SistemaCadastro.Forms\bin\Debug\Devs2Blu.ProjetosAula.SistemaCadastro.Models.pdb

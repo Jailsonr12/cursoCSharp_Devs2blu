@@ -1,0 +1,14 @@
+C:\devs\SistemaAgenda\src\SolutionSistemaAgendaCadrastro\Devs2Blu.ProjetosAula.Integracao.AgendaContatos\bin\Debug\Devs2Blu.ProjetosAula.Integracao.AgendaContatos.exe.config
+C:\devs\SistemaAgenda\src\SolutionSistemaAgendaCadrastro\Devs2Blu.ProjetosAula.Integracao.AgendaContatos\bin\Debug\Devs2Blu.ProjetosAula.Integracao.AgendaContatos.exe
+C:\devs\SistemaAgenda\src\SolutionSistemaAgendaCadrastro\Devs2Blu.ProjetosAula.Integracao.AgendaContatos\bin\Debug\Devs2Blu.ProjetosAula.Integracao.AgendaContatos.pdb
+C:\devs\SistemaAgenda\src\SolutionSistemaAgendaCadrastro\Devs2Blu.ProjetosAula.Integracao.AgendaContatos\bin\Debug\Devs2Blu.ProjetosAula.Integracao.AgendaContatos.Model.dll
+C:\devs\SistemaAgenda\src\SolutionSistemaAgendaCadrastro\Devs2Blu.ProjetosAula.Integracao.AgendaContatos\bin\Debug\Devs2Blu.ProjetosAula.Integracao.AgendaContatos.Model.pdb
+C:\devs\SistemaAgenda\src\SolutionSistemaAgendaCadrastro\Devs2Blu.ProjetosAula.Integracao.AgendaContatos\obj\Debug\Devs2Blu.ProjetosAula.Integracao.AgendaContatos.csproj.AssemblyReference.cache
+C:\devs\SistemaAgenda\src\SolutionSistemaAgendaCadrastro\Devs2Blu.ProjetosAula.Integracao.AgendaContatos\obj\Debug\Devs2Blu.ProjetosAula.Integracao.AgendaContatos.csproj.SuggestedBindingRedirects.cache
+C:\devs\SistemaAgenda\src\SolutionSistemaAgendaCadrastro\Devs2Blu.ProjetosAula.Integracao.AgendaContatos\obj\Debug\Devs2Blu.ProjetosAula.Integracao.AgendaContatos.Form1.resources
+C:\devs\SistemaAgenda\src\SolutionSistemaAgendaCadrastro\Devs2Blu.ProjetosAula.Integracao.AgendaContatos\obj\Debug\Devs2Blu.ProjetosAula.Integracao.AgendaContatos.Properties.Resources.resources
+C:\devs\SistemaAgenda\src\SolutionSistemaAgendaCadrastro\Devs2Blu.ProjetosAula.Integracao.AgendaContatos\obj\Debug\Devs2Blu.ProjetosAula.Integracao.AgendaContatos.csproj.GenerateResource.cache
+C:\devs\SistemaAgenda\src\SolutionSistemaAgendaCadrastro\Devs2Blu.ProjetosAula.Integracao.AgendaContatos\obj\Debug\Devs2Blu.ProjetosAula.Integracao.AgendaContatos.csproj.CoreCompileInputs.cache
+C:\devs\SistemaAgenda\src\SolutionSistemaAgendaCadrastro\Devs2Blu.ProjetosAula.Integracao.AgendaContatos\obj\Debug\Devs2Blu.ProjetosAula.Integracao.AgendaContatos.csproj.CopyComplete
+C:\devs\SistemaAgenda\src\SolutionSistemaAgendaCadrastro\Devs2Blu.ProjetosAula.Integracao.AgendaContatos\obj\Debug\Devs2Blu.ProjetosAula.Integracao.AgendaContatos.exe
+C:\devs\SistemaAgenda\src\SolutionSistemaAgendaCadrastro\Devs2Blu.ProjetosAula.Integracao.AgendaContatos\obj\Debug\Devs2Blu.ProjetosAula.Integracao.AgendaContatos.pdb
