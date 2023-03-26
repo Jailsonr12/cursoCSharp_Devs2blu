@@ -4,21 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Devs2Blu.ProjetosAula.Classes {
-    public class Diretor : Pessoa {
-        public double Prolabore { get; set; }
+namespace Devs2Blu.ProjetosAula.Classes
+{
+    public class Diretor : Pessoa
+    {
+        public double ProLabore { get; set; }
 
         public Diretor() { }
-        public Diretor(string nome, string sobreNome, double proLabore) {
-
+        public Diretor(string nome, string sobreNome, double proLabore)
+        {
             Nome = nome;
             SobreNome = sobreNome;
-            Prolabore = proLabore;
-        
+            ProLabore = proLabore;
         }
-        public string VerificarStatus() {
-            return "Hospital OK";
+        public string VerificaStatus()
+        {
+            return "Hospital OK!";
         }
-
     }
 }

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F6A8AACF-36CA-4C33-8FDC-E79E3207564B}</ProjectGuid>
+    <ProjectGuid>{77D607EF-9169-47B4-BABE-78C73554E363}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Dev2Blu.ProjetosAula.AulaOOP1Int</RootNamespace>
     <AssemblyName>Dev2Blu.ProjetosAula.AulaOOP1Int</AssemblyName>
@@ -81,7 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Devs2Blu.ProjetosAula.Classes\Devs2Blu.ProjetosAula.Classes.csproj">
-      <Project>{6e599162-cf06-4013-9447-13b687cee0fb}</Project>
+      <Project>{5c1dabf0-9363-4817-bbbc-24eecdf95fc0}</Project>
       <Name>Devs2Blu.ProjetosAula.Classes</Name>
     </ProjectReference>
   </ItemGroup>

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6E599162-CF06-4013-9447-13B687CEE0FB}</ProjectGuid>
+    <ProjectGuid>{5C1DABF0-9363-4817-BBBC-24EECDF95FC0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Devs2Blu.ProjetosAula.Classes</RootNamespace>
